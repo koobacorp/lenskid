@@ -1,0 +1,43 @@
+LENSKID v1.0 - install on Mac (DaVinci Resolve 18/19/20, free or Studio)
+
+You get two things in this zip:
+  LENSKID.ofx.bundle  - the looks plugin (grain, glow, wobble, damage + colour)
+  LUTs/LENSKID        - 7 colour-only LUTs (.cube), one per look
+
+THE PLUGIN
+1. Quit DaVinci Resolve.
+2. Open Terminal and paste these 3 lines one by one (Enter after each; it asks for your
+   Mac password, typing shows nothing - that's normal):
+
+   sudo mkdir -p /Library/OFX/Plugins
+   sudo rm -rf /Library/OFX/Plugins/LENSKID.ofx.bundle
+   sudo cp -R ~/Downloads/LENSKID.ofx.bundle /Library/OFX/Plugins/
+
+   (If you unzipped somewhere else, drag LENSKID.ofx.bundle onto the Terminal window
+   instead of typing ~/Downloads/LENSKID.ofx.bundle.)
+3. Open Resolve. Effects > OpenFX > Filters > LENSKID. Drop it on a clip (Edit page) or
+   on a node (Color page), then pick a Look in the Inspector.
+
+THE LUTS
+1. Copy the "LENSKID" folder into:
+   /Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/
+   (Terminal:  sudo cp -R ~/Downloads/LUTs/LENSKID "/Library/Application Support/Blackmagic Design/DaVinci Resolve/LUT/" )
+2. Restart Resolve (or Project Settings > Color Management > Update Lists).
+3. Color page: open the LUTs panel (top left) > LENSKID, and drag a look onto a node.
+   Or right-click a node > LUT > LENSKID > pick one.
+
+HOW THE CONTROLS WORK
+- Look: the 7 looks. Every slider's 50 = that look's normal amount (0 = off, 100 = double).
+- Amount %: the whole look. 0 = the clip untouched.
+- Grain, Glow / Halation, Wobble / Lens, Distortion / Damage: see README.md for what each
+  slider does in each look.
+- Real colour blend %: pulls the colours back toward the real ones but keeps the texture.
+  On Thermal Heart, 30-50% keeps faces readable.
+- More options (closed by default): Vignette, 18 fps feel (Super 8), Light leaks, Date stamp
+  and its text (Dashcam), Beat hits + BPM + Beat offset (Melt), Random seed.
+
+TIPS
+- Footage should be in Rec.709 (normal phone / camera footage, or after your colour-space
+  conversion). On LOG footage, put LENSKID or the LUT after your conversion node.
+- LENSKID runs on the CPU. On 4K timelines, playback can stutter; renders are fine.
+  Use Playback > Render Cache > Smart, or proxies, while editing.

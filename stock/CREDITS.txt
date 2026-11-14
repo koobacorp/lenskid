@@ -1,0 +1,9 @@
+Test photos used for the before/after stills (all from Wikimedia Commons, downscaled to 1280 px).
+They are only test material; they are not part of the plugin or the LUT pack.
+
+dance_park.jpg       "Dancing at Cal Anderson Park" - Joe Mabel - CC BY-SA 3.0
+street_dance.jpg     "Street Liturgical folk dancing in Malolos City 03" - Zarate123 - CC BY-SA 4.0
+road_windshield.jpg  "Jeep Wagoneer (SJ) like-new in red on the road photographed through my windshield" - CZmarlin - CC0
+road_spring.jpg      "Road in Northern Germany during springtime - 20050501" - Susannesonja. - Public domain
+golden_portrait.jpg  "L'heure doree (4553728646)" - Anemone Jones - CC BY 2.0
+green_lawn.jpg       "DZ6 2501 Sunny day on the green palm trees blue skies and a peaceful fairway..." - PattayaPatrol - CC BY-SA 4.0
